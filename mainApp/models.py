@@ -4,7 +4,7 @@ import uuid
 class UserDetails(models.Model):
     result = models.CharField(max_length=50)
     result_id = models.UUIDField(
-        primary_key = True, 
+#        primary_key = True, 
         default = uuid.uuid4,
         editable = False, 
         unique=True
