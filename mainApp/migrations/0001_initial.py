@@ -15,11 +15,10 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='UserDetails',
             fields=[
-                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False, unique=True)),
-                ('name', models.CharField(max_length=50)),
-                ('bank_ac_number', models.PositiveIntegerField(default=0)),
-                ('paypal_number', models.PositiveIntegerField(default=0)),
-                ('ifsc_code', models.CharField(max_length=50)),
+                ('result', models.CharField(max_length=50)),
+                ('result_id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False, unique=True)),
+                ('status', models.CharField(max_length=50)),
+                ('timeout', models.PositiveIntegerField(default=0)),
             ],
         ),
     ]
